@@ -24,7 +24,7 @@ runs:
       id: generate_token
       uses: actions/create-github-app-token@v1
       with:
-        app-id: "xxx"
+        app-id: "1646850"
         private-key: ${{ inputs.appsecret }}
         repositories: "workflowrepo"
         owner: "tvdvoorde"
