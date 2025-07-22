@@ -23,7 +23,7 @@ runs:
 
     - name: Generate application token
       id: generate_token
-      uses: actions/create-github-app-token@v1
+      uses: actions/create-github-app-token@v2
       with:
         app-id: "1646850"
         private-key: ${{ inputs.appsecret }}
