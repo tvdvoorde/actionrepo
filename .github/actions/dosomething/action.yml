@@ -27,4 +27,6 @@ runs:
       with:
         app-id: "1646850"
         private-key: ${{ inputs.appsecret }}
+        repositories: |
+          workflowrepo
 
