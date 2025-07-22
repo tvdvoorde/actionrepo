@@ -3,13 +3,13 @@ description: dosomething
 
 inputs:
   comment:
-    description: "comment"
+    description: "comment parameter"
     required: false
 
 runs:
   using: "composite"
   steps:
-    - name: Display inputs header
+    - name: 'display inputs'
       shell: bash
       run: |
         echo "Calling repository: ${{ github.repository }}"
