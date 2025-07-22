@@ -18,7 +18,7 @@ runs:
         echo "Calling repository: ${{ github.repository }}"
         echo "Calling workflow: ${{ github.workflow }}"
         echo "Parameter: ${{ inputs.comment }}"
-        echo "Secret: ${{ input.appsecret }}"
+        echo "Secret: ${{ inputs.appsecret }}"
         ls -ltr
 
     - name: Generate application token
