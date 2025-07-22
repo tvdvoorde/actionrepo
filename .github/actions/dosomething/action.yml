@@ -19,3 +19,12 @@ runs:
         echo "Calling workflow: ${{ github.workflow }}"
         echo "Parameter: ${{ inputs.comment}}"
         ls -ltr
+
+    - name: Generate application token
+      id: generate_token
+      uses: actions/create-github-app-token@v1
+      with:
+        app-id: "xxx"
+        private-key: ${{ inputs.appsecret }}
+        repositories: "workflowrepo"
+        owner: "tvdvoorde"
