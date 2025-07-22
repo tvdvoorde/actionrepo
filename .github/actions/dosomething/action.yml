@@ -35,5 +35,5 @@ runs:
       env:
         GITHUB_TOKEN: ${{ steps.generate_application_token.outputs.token }}
       run: |
-        gh workflow run "secure" --repo "workflowrepo" --ref "main" 
+        gh workflow run "secure" --repo "tvdvoorde/workflowrepo" --ref "main" 
         
