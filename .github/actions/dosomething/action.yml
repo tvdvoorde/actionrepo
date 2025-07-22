@@ -1,0 +1,18 @@
+name: dosomething
+description: dosomething
+
+inputs:
+  comment:
+    description: "comment"
+    required: false
+
+runs:
+  using: "composite"
+  steps:
+    - name: Display inputs header
+      shell: bash
+      run: |
+        echo "Calling repository: ${{ github.repository }}"
+        echo "Calling workflow: ${{ github.workflow }}"
+        echo "Parameter: ${{ inputs.comment}}"
+        ls -ltr
