@@ -22,7 +22,7 @@ runs:
         ls -ltr
 
     - name: Generate application token
-      id: generate_token
+      id: generate_application_token
       uses: actions/create-github-app-token@v2
       with:
         app-id: "1646850"
@@ -30,3 +30,10 @@ runs:
         repositories: |
           workflowrepo
 
+    - name: trigger secure workflow
+      shell: bash
+      env:
+        GITHUB_TOKEN: ${{ steps.generate_application_token.outputs.token }}
+      run: |
+        gh workflow run "secure" --repo "workflowrepo" --ref "main" 
+        
