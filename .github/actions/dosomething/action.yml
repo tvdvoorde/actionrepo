@@ -5,6 +5,9 @@ inputs:
   comment:
     description: "comment parameter"
     required: false
+  appsecret:
+    description: "app secret"
+    required: true
 
 runs:
   using: "composite"
